@@ -1,10 +1,6 @@
 pipeline {
     agent any
-     tools {
-        LocalMaven'apache-maven-3.8.1' 
-    }
-    
-    stages {
+     stages {
            stage('Build Application') {
             steps {
                 sh 'mvn -f java-tomcat-sample/pom.xml clean package'
